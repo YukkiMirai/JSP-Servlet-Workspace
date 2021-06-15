@@ -141,6 +141,7 @@ public class StudentControllerServlet extends HttpServlet {
 		studentDbUtil.addStudent(theStudent);
 		// send back to main page (the student list)
 		listStudents(request, response);
+		request.setAttribute("command", "");
 	}
 
 	private void listStudents(HttpServletRequest request, HttpServletResponse response) throws Exception {
